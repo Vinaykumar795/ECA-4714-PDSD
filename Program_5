@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Business Website</title>
+<style>
+body { font-family:Arial; margin:0; background:#eee; }
+header { background:navy; color:white; padding:20px; text-align:center; }
+nav { background:#333; padding:15px; text-align:center; }
+nav button { margin:5px; padding:10px; cursor:pointer; }
+section { background:white; margin:20px; padding:30px; }
+</style>
+</head>
+<body>
+<header><h1>My Business</h1></header>
+<nav>
+<button onclick="show('home')">Home</button>
+<button onclick="show('about')">About</button>
+<button onclick="show('contact')">Contact</button>
+</nav>
+<section id="home"><h2>Home</h2><p>Welcome to our business.</p></section>
+<section id="about" hidden><h2>About</h2><p>We provide quality services.</p></section>
+<section id="contact" hidden><h2>Contact</h2><p>Email: info@example.com</p></section>
+<script>
+function show(id) {
+  document.querySelectorAll("section").forEach(s => s.hidden = true);
+  document.getElementById(id).hidden = false;
+}
+</script>
+</body>
+</html>
