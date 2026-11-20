@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Application</title>
+<style>
+body { font-family:Arial; background:lightblue; }
+form {
+  background:white;
+  padding:20px;
+  width:300px;
+  margin:50px auto;
+  border-radius:10px;
+}
+input,select,button { margin:8px; padding:8px; }
+</style>
+</head>
+<body>
+<form onsubmit="return validate()">
+<h2>Job Application</h2>
+<input id="name" placeholder="Name" required><br>
+<input id="email" type="email" placeholder="Email" required><br>
+<select id="degree" required>
+<option value="">Select Qualification</option>
+<option>B.Sc</option>
+<option>B.Tech</option>
+<option>MCA</option>
+</select><br>
+Gender:
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female<br>
+<button type="submit">Submit</button>
+<button type="reset">Cancel</button>
+</form>
+<script>
+function validate() {
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email");
+  let degree = document.getElementById("degree").value;
+  let gender = document.querySelector('input[name="gender"]:checked');
+
+  if (!name || !email.checkValidity() || !degree || !gender) {
+    alert("Enter all valid details");
+    return false;
+  }
+  alert("Application Submitted Successfully");
+  return false;
+}
+</script>
+</body>
+</html>
