@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bike Showroom</title>
+</head>
+<frameset rows="20%,80%">
+  <frame srcdoc="<body style='background:navy;color:white;text-align:center'><h1>BIKE SHOWROOM</h1></body>">
+  <frameset cols="30%,70%">
+    <frame srcdoc="<body style='background:lightblue'><h2>Bike Brands</h2><a href='https://www.honda2wheelersindia.com/' target='details'>Honda</a><br><br><a href='https://www.yamaha-motor-india.com/' target='details'>Yamaha</a><br><br><a href='https://www.bajajauto.com/' target='details'>Bajaj</a></body>">
+    <frame name="details" srcdoc="<h2>Bike Models</h2><table border='1' cellpadding='10'><tr><th>Brand</th><th>Model</th><th>Engine</th></tr><tr><td>Honda</td><td>Shine</td><td>125cc</td></tr><tr><td>Yamaha</td><td>R15</td><td>155cc</td></tr><tr><td>Bajaj</td><td>Pulsar</td><td>150cc</td></tr></table>">
+  </frameset>
+</frameset>
+</html>
