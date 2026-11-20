@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>LAMP and WAMP</title></head>
+<body>
+<h2>LAMP / WAMP Stack</h2>
+<?php
+echo "<p>Apache serves the web application.</p>";
+echo "<p>PHP processes server-side code.</p>";
+
+$conn = @new mysqli("localhost", "root", "", "test");
+
+if ($conn->connect_error) {
+    echo "MySQL Connection Failed";
+} else {
+    echo "MySQL Connected Successfully";
+    $conn->close();
+}
+?>
+</body>
+</html>
